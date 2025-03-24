@@ -9,9 +9,9 @@ public class UsuariosController : ControllerBase
 
     public UsuariosController()
     {
-        var client = new MongoClient("mongodb://localhost:27017");
-        var database = client.GetDatabase("SistemaUsuarios");
-        _usuarios = database.GetCollection<Usuario>("usuarios");
+        var client = new MongoClient(CadenasConexion.MONGO_DB);
+        var database = client.GetDatabase("Practica2_Mia_Danna");
+        _usuarios = database.GetCollection<Usuario>("Usuarios");
     }
 
     [HttpGet]

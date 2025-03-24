@@ -2,6 +2,7 @@ using MongoDB.Bson.Serialization.Attributes;
 public class Usuario{
     [BsonId]
     [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+    public string? ObjectId { get; set; }
     public string Nombre { get; set; }
     public int Edad { get; set; }
     public decimal Salario { get; set; }
